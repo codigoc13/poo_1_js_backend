@@ -19,7 +19,7 @@ class Persona {
   }
 
   quienSoy() {
-    console.log(`Soy ${this.nombre}Patri, yo `)
+    console.log(`Soy ${this.nombre} y mi frase favorita es '${this.frase}'`)
   }
 }
 
@@ -32,6 +32,7 @@ const juanPa = new Persona(
 
 console.log(marisol)
 console.log(juanPa)
+marisol.quienSoy()
 
 //===========================================
 
@@ -47,7 +48,14 @@ class Persona2 {
   set setComidaFavorita(comida) {
     this.comidaFavorita = comida.toUpperCase()
   }
+
+  get getComidaFavorita() {
+    console.log(
+      `La comida favorita de ${this.nombre} es ${this.comidaFavorita}`
+    )
+  }
 }
 const jordan = new Persona2('Jordan', 24, 'Hola muchachos')
 jordan.setComidaFavorita = 'hamburguesa'
 console.log(jordan)
+jordan.getComidaFavorita
