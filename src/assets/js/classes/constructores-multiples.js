@@ -3,10 +3,17 @@ class Persona {
     return new Persona(nombre, apellido, pais)
   }
 
+  //   constructor(obj) {
+  //   }
+
   constructor(nombre, apellido, pais) {
     this.nombre = nombre
     this.apellido = apellido
     this.pais = pais
+  }
+
+  get getinfo() {
+    console.log(`Info: ${this.nombre}, ${this.apellido}, ${this.pais}`)
   }
 }
 
